@@ -1,2 +1,5 @@
 # linuxDocs
-usefull commands for linux and other information about linux
+
+commands.md file contains usefull commands for linux 
+
+system.md file other information about linux
