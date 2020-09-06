@@ -40,6 +40,6 @@ shell | the shell he is using
 
 ## groups
 
-/etc/groups
+/etc/group
 ```groupname:password:GID:list of users
 ```
