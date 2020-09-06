@@ -37,3 +37,9 @@ GID | group ID
 GECOS | real name or software name (z.B Postgres Administrator)
 /home/dir | path to user's home directory
 shell | the shell he is using
+
+## groups
+
+/etc/groups
+```groupname:password:GID:list of users
+```
