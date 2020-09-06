@@ -44,8 +44,15 @@ example:
   echo
   ```
   display line of text; similar to print string to console in python/go/js etc
-  
+  ```sh
+  ps
+  ```
+  dispaly processes ```-u``` user association (who is running the process) ```-a``` all processes
   ## user
+  ```sh
+  id
+  ```
+  get basic information about user
   ```sh
   passwd
   ``` 
