@@ -22,3 +22,18 @@ location | purpose
 /temp | space for temporary files, auto delete after 10 days
 /boot | files needed for boot process
 /dev | contains special device files which are used by the system to access hardware
+
+## user
+
+/etc/passwd
+```username:password:UID:GID:GECOS:/home/dir:shell```
+
+item | description
+---|---
+username | mapping of UID to a name for benefit of human users
+password | vestigial datafield, always ___x___
+UID | user ID
+GID | group ID
+GECOS | real name or software name (z.B Postgres Administrator)
+/home/dir | path to user's home directory
+shell | the shell he is using
