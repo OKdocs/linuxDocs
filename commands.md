@@ -94,6 +94,25 @@ example:
   passwd
   ``` 
   change user password
+  ```sh 
+  usermod [options] username
+  ```
+  modify user account
+  
+## groups
+
+```sh
+groupadd [options] groupname
+```
+create a new group
+```sh 
+groupmod [options] groupname
+```
+modify group
+```sh
+groupdel [options] groupname
+```
+delete group
 
 ## permissions
   owner group all
