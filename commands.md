@@ -57,10 +57,7 @@ example:
   id
   ```
   get basic information about user
-  ```sh
-  passwd
-  ``` 
-  change user password
+
   ```sh
   su
   ```
@@ -83,6 +80,20 @@ example:
   visudo
   ```
   use vim as super user to edit special files
+  
+  ### creating and managing users
+  ```sh
+  useradd username
+  ```
+  create new user, many options ```-c``` GECOS ```-g``` primary group ```-d``` home directory
+  ```sh
+  userdel username
+  ```
+  removes user (removes entry from */etc/passwd*) with ```-r``` also home directory
+  ```sh
+  passwd
+  ``` 
+  change user password
 
 ## permissions
   owner group all
