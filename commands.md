@@ -97,18 +97,18 @@ example:
   ```sh 
   usermod [options] username
   ```
-  modify user account
+  modify user account ```-G``` remove user from all groups and add to those stated ```-aG``` append stated groups to groups the user is in. Usually use ```-aG```.
   
 ## groups
 
 ```sh
 groupadd [options] groupname
 ```
-create a new group
+create a new group ```-g``` specify GID ```-r``` system group
 ```sh 
 groupmod [options] groupname
 ```
-modify group
+modify group ```-n newname oldname``` change name
 ```sh
 groupdel [options] groupname
 ```
