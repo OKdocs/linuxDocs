@@ -64,7 +64,15 @@ example:
   ```sh
   su
   ```
-  change user ```su [option] [username]``` ```-c command``` option executes single command as other user
+  switch user ```su [option] [username]``` ```-c command``` option executes single command as other user ```-``` to switch to root, not always possible for security reasons, if not use ```sudo su```
+  ```sh
+  sudo command
+  ```
+  execute command as super user
+  ```sh 
+  visudo
+  ```
+  use vim as super user to edit special files
 
 ## permissions
   owner group all
