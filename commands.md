@@ -123,6 +123,11 @@ delete group
   ```
   drwxrwxrwx numberOfFiles owner group ...
   ```
+  pemission | files | directory
+  ---|---|---|
+  r | contents of file can be read | contents of directory (file names) can be read (ls command)
+  w | contents of file can be changed | new files can be created and all files (independent of file permissions) can be deleted
+  x | files can be executed as commands | 
   
   ##### setting permissions
   
