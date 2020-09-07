@@ -25,6 +25,10 @@ location | purpose
 
 ## user
 
+```$``` superuser
+
+```#``` regular user
+
 /etc/passwd
 ```username:password:UID:GID:GECOS:/home/dir:shell```
 
