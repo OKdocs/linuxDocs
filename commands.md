@@ -50,6 +50,10 @@ example:
   dispaly processes ```-u``` user association (who is running the process) ```-a``` all processes
   ## user
   ```sh
+  whoami
+  ```
+  displays user name of logged in user
+  ```sh
   id
   ```
   get basic information about user
@@ -57,6 +61,10 @@ example:
   passwd
   ``` 
   change user password
+  ```sh
+  su
+  ```
+  change user ```su [option] [username]``` ```-c command``` option executes single command as other user
 
 ## permissions
   owner group all
