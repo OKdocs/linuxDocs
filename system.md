@@ -47,3 +47,16 @@ shell | the shell he is using
 /etc/group
 ```groupname:password:GID:list of users
 ```
+
+## processes
+consists of *process* and *environment*
+
+**process**
++ and address space of allocated memory
++ security properties including ownership credentials and privileges
++ one or more execution threads of program code
++ process state
+**environmen**
++ local and global variables
++ current scheduling context
++ allocated system resources (file descriptors, network ports)
