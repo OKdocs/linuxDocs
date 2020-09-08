@@ -161,7 +161,25 @@ code|permission|binary
   5|read & execute |101
   6|read & write | 110
   7| all|111
-
+  
+  ### setting special permissions
+  
+  u+s == **setuid**  
+  g+s == **setgid** 
+  o+t == **sticky**  
+  
+  special permission | effect on files | efect on directories
+  --- | --- | ---
+  u+s | executes as user that owns, not logged in user | no effect
+  g+s | executes as the group that owns | new created files have group owner set to directory group owner
+  o+t | no effect | users with write permissions can only remove files they own
+  
+  #### special permissions numeric method
+  
+  setuid = 4 setgit =2 sticky = 1
+  ```sh
+  chmod [0-7][0-7][0-7]0 directory/file
+  ```
  
  ## change ownership
  
