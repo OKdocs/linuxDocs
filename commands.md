@@ -44,10 +44,7 @@ example:
   echo
   ```
   display line of text; similar to print string to console in python/go/js etc
-  ```sh
-  ps
-  ```
-  dispaly processes ```-u``` user association (who is running the process) ```-a``` all processes
+
   ## user
   ```sh
   whoami
@@ -138,7 +135,7 @@ delete group
  
  #### symbolic method keywords
  ```sh
- chomod WhoWhatWhich file|directory
+ chmod WhoWhatWhich file|directory
  ```
  *who*  u==user g==group o==other a==all
  *what* +,-,= (add, remove, set)
@@ -312,6 +309,7 @@ code|permission|binary
   + GNU preceded by two dashes (--)
   
   ``` ps aux``` and ``` ps -aux``` and ```-ef``` seem to be popular 
+  ```-u``` user association (who is running the process) ```-a``` all processes ```-x``` no tty required
   without options shows just processes with same uid invoked from the same terminal
   
   ```sh
