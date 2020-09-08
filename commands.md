@@ -117,7 +117,7 @@ delete group
 ## permissions
   owner group all
   ```
-  -rw-r--r-- number owner group ...
+  -rw-r--r-- size owner group ...
   ```
   directories
   ```
@@ -127,14 +127,31 @@ delete group
   ---|---|---|
   r | contents of file can be read | contents of directory (file names) can be read (ls command)
   w | contents of file can be changed | new files can be created and all files (independent of file permissions) can be deleted
-  x | files can be executed as commands | 
+  x | files can be executed as commands | contents can be accessed (also cd is possible)
   
-  ##### setting permissions
+  ### setting permissions
   
   ```
   chmod [options] file
   ```
-  code|permission|binary
+
+ 
+ #### symbolic method keywords
+ ```sh
+ chomod WhoWhatWhich file|directory
+ ```
+ *who*  u==user g==group o==other a==all
+ *what* +,-,= (add, remove, set)
+ *which* r,w,x (read, write, execute)
+ 
+ #### numeric method
+ 
+```sh
+chmod ### file|directory
+```
+UserGroupOther = [0-7][0-7][0-7]
+
+code|permission|binary
   ---|---|---
   0|none|000
   1|execute|001
@@ -144,16 +161,20 @@ delete group
   5|read & execute |101
   6|read & write | 110
   7| all|111
-  
- 0 none 
- 1 execute permission
- 2 write permission
+
  
  ## change ownership
  
- ```
+ ```sh
  chown [options][owner] file
  ```
+ set permissions ```-R``` set recursively for whole directory tree
+ 
+ ```sh
+ chown user:group file
+ chown :group file
+ ```
+ chown can also ge used to set user:group ownership or just :group ownership
  
 ## remote login
 
