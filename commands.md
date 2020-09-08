@@ -300,4 +300,22 @@ code|permission|binary
   [[:space:]] | space \t \n \r \f
   
   
+  ## processes
+  process names in [] are scheduled kernel threads
+  
+  ```sh
+  ps [options]
+  ```
+  process snapshot: display processes at timepoint of invokation. options are plentiful, check ```man ps```, they come in three main groups:
+  + BSD not preceded by dash (), groupable
+  + UNIX (POSIX) preceded by a dash (-), groupable 
+  + GNU preceded by two dashes (--)
+  
+  ``` ps aux``` and ``` ps -aux``` and ```-ef``` seem to be popular 
+  without options shows just processes with same uid invoked from the same terminal
+  
+  ```sh
+  top
+  ```
+  display (and live-update) current linux processes
   
