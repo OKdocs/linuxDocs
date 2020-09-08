@@ -180,6 +180,12 @@ code|permission|binary
   ```sh
   chmod [0-7][0-7][0-7]0 directory/file
   ```
+  ### setting permissions for files created in the future
+  
+  ```sh
+  umask
+  ```
+  masks permissions for files created, read ```man umask``` well descibed there
  
  ## change ownership
  
