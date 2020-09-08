@@ -60,3 +60,55 @@ consists of *process* and *environment*
 + local and global variables
 + current scheduling context
 + allocated system resources (file descriptors, network ports)
+
+parent processes **fork** child processes which can inherit process and environment
+
+### process states
+<table>
+  <tr>
+    <th>name</th>
+    <th>flag</th>
+    <th>kernel-defined state name description</th>
+  </tr>
+  <tr>
+    <td>RUNNING</td>
+    <td> <b>R</b> </td>
+    <td>TASK_RUNNING: executing on CPU or waiting to run</td>
+  </tr>
+   <tr>
+    <td rowspan=4>SLEEPING</td>
+     <td><b>S</b></td>
+    <td>TASK_INTERRUPTIBLE: waiting for condition: when event or signal satisfies the condition, process return to RUNNING</td>
+  </tr>
+   <tr>
+    <td><b>D</b></td>
+    <td>TASK_UNINTERRUPTIBLE: sleeping and not responding to signals, if killed, may cause unpredictable device state</td>
+  </tr>
+  <tr>
+    <td><b>I</b></td>
+    <td>TASK_UNINTERRUPTABLE | TASK_NOLOAD: idle threads that do not require any load / don't use any resources. Just ignore processes marked as <b>I</b>
+   <tr>
+    <td><b>K</b></td>
+    <td>TASK_KILLABLE: sleeping and not waiting for signal but if killed everything is going to be alright</td>
+  </tr>
+   <tr>
+    <td rowspan=2>STOPPED</td>
+    <td><b>T</b></td>
+    <td>TASK_STOPPED: Stopped by user or other process. Can return to RUNNING by another signal</td>
+  </tr>
+   <tr>
+    <td><b>T</b></td>
+    <td>TASK_TRACED: temporarily stopped for debugging</td>
+  </tr>
+   <tr>
+    <td rowspan=2>ZOMBIE</td>
+    <td><b>Z</b></td>
+    <td>EXIT_ZOMBIE: exit signal from child process to parent, all but PID are released</td>
+  </tr>
+   <tr>
+    <td><b>X</b></td>
+    <td>EXIT_DEAD: after parent process reaps remaining child process structure, process is released completely. Will never be observed in process-listing utilities </td>
+</table>
+  
+
+
