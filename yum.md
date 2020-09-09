@@ -79,6 +79,7 @@ __+__ | package isn't installed, will be if the group is installed or updated
 __-__ | package isn't installed, will not be if the group is installed or updated
 _no marker_ | package is installed, but was not installed through the group
 ```sh
-yum group install
-yum groupinstall
+yum group install GROUPNAME
+yum groupinstall GROUPNAME
 ```
+install group
