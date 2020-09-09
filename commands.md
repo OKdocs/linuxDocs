@@ -37,6 +37,10 @@ example:
   ```
   display or set system time
   ```sh
+  sleep number[SUFFIX]
+  ```
+  pause for number of seconds. Suffix can be ```s``` seconds (default) ```m``` minutes ```h``` hours ```d``` days 
+  ```sh
   history
   ```
   display command history
@@ -316,4 +320,16 @@ code|permission|binary
   top
   ```
   display (and live-update) current linux processes
+  ```sh
+  jobs
+  ```
+  diplays jobs currently running in this session (should be only background)
   
+ ```sh
+ fg %JobNumber
+ ```
+ brings job from background to  foreground, find job number with ```jobs``` command
+ ```sh
+ bg %JobNumber
+ ```
+ start suspended job in background, suspend job in foreground with **ctrl+z**
