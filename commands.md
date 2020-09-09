@@ -339,7 +339,21 @@ code|permission|binary
  kill [options] <pid>...
  ```
  send signal (default: **SIGTERM**) to process <pid> other signals can be chosen in options like ```-19``` suspend ```-18``` continue serveral pid (process ids) can be given
-  
+ 
+  ```sh
+  killall command_pattern
+  killall -signal command_pattern
+  killall -signal -u username command_pattern
+  ```
+  send signal to one or more processes matching selection criteria, has a ridiculus huge amount of complex options, use above examples for regular stuff, otherwise dig deeper with ```man``` pages
+  ```sh 
+  pkill command_pattern
+  pkill -signal command_pattern
+  pkill -G GID command_pattern
+  pkill -P PPID (parent process id) command_pattern
+  pkill -t terminal_name -U UID command_pattern
+  ```
+  send signal to one or more processes matching selection criteria, like killall but with even more and more complex selection criteria
   
   ```sh
   nice [option] [command [arg]..]
