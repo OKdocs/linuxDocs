@@ -60,6 +60,10 @@ example:
   grep pattern
   ```
   regular expression
+  ```sh
+  uname
+  ```
+  view current running kernel ```-r``` show only kernel version and release ```-a``` kernel release and additional info
   ## user
   ```sh
   whoami
