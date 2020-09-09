@@ -333,3 +333,20 @@ code|permission|binary
  bg %JobNumber
  ```
  start suspended job in background, suspend job in foreground with **ctrl+z**
+ 
+ ### signaling
+ ```sh
+ kill [options] <pid>...
+ ```
+ send signal (default: **SIGTERM**) to process <pid> other signals can be chosen in options like ```-19``` suspend ```-18``` continue serveral pid (process ids) can be given
+  
+  
+  ```sh
+  nice [option] [command [arg]..]
+  ```
+  run program with adjusted "niceness" aka priority, without command, displays priority
+  ```sh
+  renice
+  ``` 
+  adjust "niceness" aka priority of running process
+  
