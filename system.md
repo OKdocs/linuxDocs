@@ -118,3 +118,20 @@ Processes can be started in the *background* by adding an ampersand (**&**) to t
 ```sh
 command [options] [target] &
 ```
+### process control
+
+#### fundamental process management signals
+
+short names (**HUP**) add **SIG** to become proper name (**SIGHUP**)
+
+signal number | short name | definition | purpose
+--- | --- | --- | ---
+1 | **HUP** | Hangup | report termination of controlling process or request process reinitialization without termination
+2 | **INT** | Keyboard interrupt | program termination, can be blocked or handled (**ctrl** + **c**)
+3 | **QUIT** | Keyboard quit | same as **SIGINT** but also produces process dump 
+4 | **KILL** | Kill, unblockable | abrupt program termination, unblockable; always fatal
+15 | **TERM** | Terminate | program termination, can be blocked and handled and allows self-cleanup. Nearly identical to **SIGINT**
+18 | **CONT** | Continue | resume stopped process
+19 | **STOP** | Stop, unblockable | suspends the process, cannot be blocked or handled
+20 | **TSTP** | Keyboard stop | suspends the process, can be blocked and handled (**ctrl** + **z**)
+
