@@ -110,5 +110,11 @@ parent processes **fork** child processes which can inherit process and environm
     <td>EXIT_DEAD: after parent process reaps remaining child process structure, process is released completely. Will never be observed in process-listing utilities </td>
 </table>
   
+Jobs (process pipelines started from prompt) can run in the *foreground* or in the *background*, only one job per console can run in the *foreground* taking control over it's input. Both *foreground* and *background* can write to the terminal, but only the *foreground* can read inputs.
 
+Processes started from the system and not from the shell prompt, like *system deamons*, aren't members of a job and cannot be brought to the *foreground*.
 
+Processes can be started in the *background* by adding an ampersand (**&**) to the end of the command line.
+```sh
+command [options] [target] &
+```
