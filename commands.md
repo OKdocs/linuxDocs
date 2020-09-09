@@ -63,6 +63,10 @@ example:
   su
   ```
   switch user ```su [option] [username]``` ```-c command``` option executes single command as other user ```-``` to switch to root, not always possible for security reasons, if not use ```sudo su```
+```sh
+w
+```
+shows which users are currently logged in
   
   ### super user permissions
   ```sh 
