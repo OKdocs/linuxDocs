@@ -64,7 +64,11 @@ example:
   uname
   ```
   view current running kernel ```-r``` show only kernel version and release ```-a``` kernel release and additional info
-  ## user
+ ```sh
+ clear
+ ```
+ clear terminal screen
+ ## user
   ```sh
   whoami
   ```
