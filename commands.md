@@ -48,7 +48,18 @@ example:
   echo
   ```
   display line of text; similar to print string to console in python/go/js etc
-
+  ```sh
+  uptime
+  ```
+  tells how long a system has been running and average CPU-load
+  ```sh
+  lscpu
+  ```
+  display system information
+  ```sh
+  grep pattern
+  ```
+  regular expression
   ## user
   ```sh
   whoami
@@ -320,10 +331,7 @@ code|permission|binary
   ```-u``` user association (who is running the process) ```-a``` all processes ```-x``` no tty required
   without options shows just processes with same uid invoked from the same terminal
   
-  ```sh
-  top
-  ```
-  display (and live-update) current linux processes
+
   ```sh
   pstree
   ```
@@ -341,6 +349,36 @@ code|permission|binary
  bg %JobNumber
  ```
  start suspended job in background, suspend job in foreground with **ctrl+z**
+ ### hot
+   ```sh
+  top
+  ```
+  display (and live-update) current linux processes
+  + PID process ID
+  + USER user name
+  + VIRT virual memory used 
+  + RES resident memory in physical memory used by the process
+  + S state (D,R,S,T,Z)
+  + TIME total processing time since the process started
+  + COMMAND command name
+  
+  **fundamental keystrokes**
+  key | purpose
+  ---|---
+  __?__ *or* __h__ | help for interactive keystrokes
+  __l__, __t__, __m__ | toggels for load, threads, and memory header lines
+  __1__ | toggle showing individual CPUs or summary for all CPUs in header
+  __s__ | change the refresh (screnn)) rate, in decimal seconds (e.g., 0.5, 1 ,5)
+  __b__ | toggle reverse highlighting for _Running_ processes; default is bold only
+  __B__ | enables use of bold in display, in the header, and for *Running* processes
+  __H__ | toggle threads; show process summary or individual threads
+  __u__, __U__ | filter for any user name (effective, real)
+  __M__ | sorts process listing by memory usage, in descending order
+  __P__ | sorts process listing by processor utilization, in descending order
+  __k__ | kill a process. When prompted, enter __PID__, then __signal__
+  __r__ | renice a process. When prompted, enter __PID__, then __nice_value__.
+  __W__ | write (save) the current display configuration for use at the next __top__ restart.
+  __q__ | quit
  
  ### signaling
  ```sh
