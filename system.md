@@ -135,3 +135,10 @@ signal number | short name | definition | purpose
 19 | **STOP** | Stop, unblockable | suspends the process, cannot be blocked or handled
 20 | **TSTP** | Keyboard stop | suspends the process, can be blocked and handled (**ctrl** + **z**)
 
+## software packages
+### Red Hat: RPM
+package file names: __name-version-release.architecture__
++ NAME one or more words describing the content
++ VERSION is the version number of the original software (2.4.6)
++ RELEASE release number
++ ARCH is the processor architecture the package was compiled to run on. "noarch" is not architecture-specific
