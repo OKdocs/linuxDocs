@@ -325,6 +325,10 @@ code|permission|binary
   ```
   display (and live-update) current linux processes
   ```sh
+  pstree
+  ```
+  view process tree, good to see forking parten/child connection ```-p``` for process of certain user
+  ```sh
   jobs
   ```
   diplays jobs currently running in this session (should be only background)
@@ -357,7 +361,7 @@ code|permission|binary
   pkill -P PPID (parent process id) command_pattern
   pkill -t terminal_name -U UID command_pattern
   ```
-  send signal to one or more processes matching selection criteria, like killall but with even more and more complex selection criteria
+  send signal to one or more processes matching selection criteria, like killall but with even more and more complex selection criteria ``` pgrep``` is a synomym
   
   ```sh
   nice [option] [command [arg]..]
