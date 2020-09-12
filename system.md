@@ -142,3 +142,24 @@ bc
 starts basic calculator, by itself nothing special but very useful in pipelines with input/output redirection
 
 ## input / output redirection
+
+### output redirection
+
+```sh
+>
+```
+redirects output, truncates the file
+```sh
+2>
+```
+error redirection
+```sh
+>>
+```
+redirect output, appends to file
+
+### input redirection
+```sh
+<
+```
+input redirection
