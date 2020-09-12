@@ -134,3 +134,11 @@ signal number | short name | definition | purpose
 18 | **CONT** | Continue | resume stopped process
 19 | **STOP** | Stop, unblockable | suspends the process, cannot be blocked or handled
 20 | **TSTP** | Keyboard stop | suspends the process, can be blocked and handled (**ctrl** + **z**)
+
+## calculator
+```sh
+bc
+```
+starts basic calculator, by itself nothing special but very useful in pipelines with input/output redirection
+
+## input / output redirection
