@@ -258,7 +258,18 @@ code|permission|binary
   wc [-lwc] filepath
   ```
   counts lines, words or characters in file
-  
+  ```sh
+  cat
+  ```
+  concatinate files and print to standard output, can be used to look into files
+  ```sh
+  less
+  ```
+  displays files contents, page by page with advanced scrolling
+  ```sh
+  more
+  ```
+  displays files contents, like less, but primitive, always use less
   ## file operations
   ```sh
   cp file1 file2/dir
