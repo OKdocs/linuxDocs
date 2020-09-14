@@ -68,10 +68,14 @@ example:
  clear
  ```
  clear terminal screen
- ``sh
+ ```sh
  login
- ``
+ ```
  begin session on system (log in as any user)
+ ```sh
+ sh
+ ```
+ dash shell command interpreter, run following text as command, similar to ```./``` 1) doesn't need execute permissions , only read permission 2) always uses dash shell, what might be the wrong shell, or text might not be commands at all
  ## user
   ```sh
   whoami
