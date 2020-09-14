@@ -68,6 +68,10 @@ example:
  clear
  ```
  clear terminal screen
+ ``sh
+ login
+ ``
+ begin session on system (log in as any user)
  ## user
   ```sh
   whoami
